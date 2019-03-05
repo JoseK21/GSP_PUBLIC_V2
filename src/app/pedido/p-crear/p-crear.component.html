@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light color">
+  <a class="navbar-brand">
+    <img src="assets/box.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span class="colorWhite">  Pedido : Crear </span>
+  </a>
+  <a class="colorWhite" routerLink="/gestion">Salir</a>
+</nav>
+<div class="container">
+  <br>
+  <form>
+    <div class="form-group">
+      <label>Sucursal de Recojo</label>
+      <input #SR type="text" class="form-control" id="pc-sucRecojo">
+    </div>
+    <div class="form-group">
+      <label>Cliente</label>
+      <input #C type="text" class="form-control" id="pc-cliente" placeholder="301110111">
+    </div>
+
+    <div class="form-group">
+      <label>Telefono preferido</label>
+      <input #T type="tel" class="form-control" id="pc-telePref">
+    </div>
+
+    <div class="form-group">
+      <label>Lista de medicamentos</label>
+      <input #LM type="text" class="form-control" id="pc-listMedi" placeholder="">
+    </div>
+
+    <div class="form-group">
+      <label>Hora de recojo</label>
+      <input #HR type="time" class="form-control" id="pc-horaRecojo">
+    </div>
+
+
+    <form enctype="multipart/form-data">
+      <label for="filesToUpload">Imagen de Receta</label><br/>
+      <input type="file" name="filesToUpload[]" id="filesToUpload" multiple="multiple" />
+      <output id="filesInfo"></output>
+    </form>
+  </form>
+  <br>
+  <button type="button" class="btn btn-outline-primary btn-block align-bottom"
+  button (click)="createPaquete(C.value,SR.value,C.value,T.value,LM.value,HR.value, ON)">Crear</button>
+  <br>
+</div>
+
+

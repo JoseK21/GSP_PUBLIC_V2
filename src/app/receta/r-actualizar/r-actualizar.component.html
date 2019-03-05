@@ -1,0 +1,43 @@
+<nav class="navbar">
+  <a class="navbar-brand">
+    <img src="assets/file.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span class="colorWhite">  Receta : Actualizar </span>
+  </a>
+  <a class="colorWhite" routerLink="/gestion">Salir</a>
+</nav>
+<div class="container ">
+  <br>
+  <form>
+    <div class="form-group">
+      <input #C class="form-control text-center" type="text" placeholder="Cedula">
+      <button class="btn btn-outline-success my-2 my-sm-0 btn-block" type="button"  
+      button (click)="getRecipe(C.value)" >Search</button>
+    </div>
+<br>
+
+    <div class="form-group">
+      <label>Número de Receta</label>
+      <input type="text" class="form-control" id="rc-numeroReceta" placeholder="{{id}}">
+    </div>
+
+    <div class="form-group">
+      <label>Doctor que emitió receta</label>
+      <input type="text" class="form-control" id="rc-nombreDoctor" placeholder="{{doctor}}">
+    </div>
+
+    <div class="form-group">
+      <label>Medicamentos prescritos</label>
+      <textarea class="form-control" id="rc-medicamentosPres" rows="3" placeholder="{{medicines}}"></textarea>
+    </div>
+
+    <form enctype="multipart/form-data">
+      <label for="filesToUpload">Imagen de Receta</label><br/>
+      <input type="file" name="filesToUpload[]" id="filesToUpload" multiple="multiple" />
+      <output id="filesInfo"></output>
+    </form>
+  </form>
+  <br>
+  <button type="button" class="btn btn-outline-primary btn-block align-bottom" >Actualizar</button>
+  <br>
+</div>
+

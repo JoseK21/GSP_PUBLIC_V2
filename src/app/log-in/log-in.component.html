@@ -1,0 +1,16 @@
+<h4><strong>Login</strong></h4>
+
+<form class="color">
+  <div class="form-group">
+    <label for="logAdminName">Número de Cédula</label>
+    <input #ID type="text" class="form-control" id="logAdminName" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="logAdminPassword">Contraseña</label>
+    <input #password type="password" class="form-control" id="logAdminPassword">
+  </div>
+  <button type="button" class="btn btn-success btn-block" routerLink="/gestion" button (click)="getCliente(ID.value)">
+    Log In
+  </button>
+
+</form>

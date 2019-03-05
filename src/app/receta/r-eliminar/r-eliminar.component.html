@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light color">
+  <a class="navbar-brand">
+    <img src="assets/file.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span class="colorWhite">  Receta : Eliminar </span>
+  </a>
+  <a class="colorWhite" routerLink="/gestion">Salir</a>
+</nav>
+<div class="container ">
+  <br>
+  <form>
+    <div class="form-group">
+      <input #C class="form-control" type="search" placeholder="Receta" aria-label="Search">
+      <button class="btn btn-outline-success btn-block" type="button" button (click)="getRecipe(C.value)"
+      >Search</button>
+    </div>
+
+    <div class="form-group">
+      <label>Doctor</label>
+      <input type="text" class="form-control" id="re-numeroReceta" placeholder="{{doctor}}"  disabled>
+    </div>
+
+    <div class="form-group">
+      <label>Medicamentos prescritos</label>
+      <input type="text" class="form-control" id="re-numeroReceta" placeholder="{{medPre}}"  disabled>
+    </div>
+
+    </form>
+  <br>
+  <button type="button" class="btn btn-outline-primary btn-block align-bottom">Eliminar</button>
+  <br>
+</div>
+
+

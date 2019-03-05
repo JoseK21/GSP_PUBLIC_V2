@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light color">
+  <a class="navbar-brand">
+    <img src="assets/file.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span class="colorWhite">  Receta : Crear </span>
+  </a>
+  <a class="colorWhite" routerLink="/gestion">Salir</a>
+</nav>
+<div class="container">
+  <br><br>
+  <form>
+    <div class="form-group">
+      <label>Número de Receta</label>
+      <input #NR type="text" class="form-control" id="rc-numeroReceta" >
+    </div>
+
+    <div class="form-group">
+      <label>Doctor que emitió receta</label>
+      <input #D type="text" class="form-control" id="rc-nombreDoctor" >
+    </div>
+
+    <div class="form-group">
+      <label>Medicamentos prescritos</label>
+      <textarea #MP class="form-control" id="rc-medicamentosPres" rows="3"></textarea>
+    </div>
+
+    <form enctype="multipart/form-data">
+
+        <label for="filesToUpload">Imagen de Receta</label><br/>
+        <input type="file" name="filesToUpload[]" id="filesToUpload" multiple="multiple" />
+        <output id="filesInfo"></output>
+
+    </form>
+
+
+  </form>
+  <br>
+  <button type="button" class="btn btn-outline-primary btn-block align-bottom" 
+  button (click)="createRecipe(NR.value , D.value, MP.value )" >Crear</button>
+  <br>
+</div>
+

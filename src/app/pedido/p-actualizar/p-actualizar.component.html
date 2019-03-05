@@ -1,0 +1,52 @@
+<nav class="navbar navbar-light color">
+  <a class="navbar-brand">
+    <img src="assets/box.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span class="colorWhite">  Pedido : Actualizar </span>
+  </a>
+  <a class="colorWhite" routerLink="/gestion">Salir</a>
+</nav>
+<div class="container">
+  <br>
+  <form class="form-inline my-2 my-lg-0 ">
+    <input #PED class="form-control mr-sm-2 px-4 " type="search" placeholder="Pedido" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" button (click)="getPaquete(PED.value)" type="button">Search</button>
+  </form>
+  <form>
+    <div class="form-group">
+      <label>Sucursal de Recojo</label>
+      <input type="text" class="form-control" id="pa-sucRecojo" placeholder="{{pickUpBranch}}">
+    </div>
+
+    <div class="form-group">
+      <label>Cliente</label>
+      <input type="text" class="form-control" id="pa-cliente" placeholder="{{id}}" disabled>
+    </div>
+
+    <div class="form-group">
+      <label>Telefono preferido</label>
+      <input type="tel" class="form-control" id="pa-telePref" placeholder="{{phone}}">
+    </div>
+
+    <div class="form-group">
+      <label>Lista de medicamentos</label>
+      <input type="text" class="form-control" id="pa-listMedi" placeholder="{{content}}">
+    </div>
+
+    <div class="form-group">
+      <label>Hora de recojo</label>
+      <input type="time" class="form-control" id="pa-horaRecojo" value="{{pickUpTime}}" >
+    </div>
+
+
+    <form enctype="multipart/form-data">
+      <label for="filesToUpload">Imagen de Receta</label><br/>
+      <input type="file" name="filesToUpload[]" id="filesToUpload" multiple="multiple" />
+      <output id="filesInfo"></output>
+    </form>
+  </form>
+  <br>
+  <button type="button" class="btn btn-outline-primary btn-block align-bottom">Actualizar</button>
+  <br>
+</div>
+
+
